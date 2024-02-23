@@ -117,6 +117,7 @@ void resolver (Jarra A, Jarra B, int resultado)
 			cout << "(A,B) = (" << A.ValorAct() << ", " << B.ValorAct() << ")\n";
 		}
 		
+		//3. Pasar de B a A el agua
 		cout << "#Pasar agua de B -> A\n";
 		A[B];
 		cout << "(A,B) = (" << A.ValorAct() << ", " << B.ValorAct() << ")\n";
@@ -126,20 +127,24 @@ void resolver (Jarra A, Jarra B, int resultado)
 
 int main()
 {
+	// Creacion de variables para las jarras
 	int a, b, resutado;
 	cout << "Introduce la capacidad de A: \n";
 	cin >> a;
 	cout << "Introduce la capacidad de B: \n";
 	cin >> b;
 	
+	// Ciclo para capturar la cantidad deseada
 	do{	
-	cout << "Introduce la capacidad deseada de A: \n";
+	cout << "Introduce el valor deseado de A: \n";
 	cin >> resutado;
 	}
 	while(!chequeo(a,b,resutado));
 	
+	// Definir las jarras
 	Jarra A(a), B(b);
 	
+	// Imprimir con los valores iniciales de las jarras
 	cout << "\n\n-Iniciar con: (A,B) = (" << A.ValorAct() << ", " << B.ValorAct() << ")\n\n";
 	resolver(A, B, resutado);
 	cout << "Listo!"<< endl;
