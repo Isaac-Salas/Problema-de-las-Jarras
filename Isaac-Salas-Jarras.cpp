@@ -85,12 +85,12 @@ bool chequeo (int a, int b, int c)
 		return false;
 	}
 	
-	// Si c es multiplo de el > de a y de b, entonces es posible
+	// Si c es multiplo de el MCD de a y de b, entonces es posible
 	if (c %MCD(a,b) == 0)
 	{
 		return true;
 	}
-	//Si c no es multiplo del ? de a y de b, entonces no es posible
+	//Si c no es multiplo del MCD de a y de b, entonces no es posible
 	cout << "No es posible llegar a ese estado con la capacidad de las jarras dadas";
 	return false;	
 }
